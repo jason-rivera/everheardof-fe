@@ -1,0 +1,37 @@
+.navHeader {
+  display: inline-block;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.navHeader::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+}
+
+.navHeader:hover::after {
+  width: 100%;
+}
+
+.offCanvasHeader {
+  background-color: #222222;
+  color: white;
+}
+
+.offCanvasBody {
+  background-color: #222222;
+  color: white;
+}
+
+.navLink  {
+  color: white;
+  transition: 0.3s all;
+}
+
+.navLink:visited {
+  color: white;
+}
