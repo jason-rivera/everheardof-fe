@@ -27,11 +27,29 @@
   color: white;
 }
 
-.navLink  {
-  color: white;
-  transition: 0.3s all;
-}
-
 .navLink:visited {
   color: white;
+}
+
+.navLink {
+  display: inline-block;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.navLink::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.emptySpan {
+  width: 30px;
 }

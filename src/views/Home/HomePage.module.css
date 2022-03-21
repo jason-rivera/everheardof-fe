@@ -1,0 +1,9 @@
+.homePageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.homePageContent {
+  text-align: center;
+  width: 500px;
+}

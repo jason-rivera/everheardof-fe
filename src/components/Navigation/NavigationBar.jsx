@@ -17,18 +17,19 @@ const NavigationBar = () => {
   const [expanded, setExpanded] = useState(false);
 
   return(
+    <div onClick={() => (expanded ? setExpanded(false) : false) }>
     <Navbar bg="dark" variant="dark" expand={false} expanded={expanded} >
       <Container fluid>
         
         <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => setExpanded(expanded ? false : "expanded")}/>
-        <Navbar.Brand href="#"><div className={styles.navHeader}>everheardof</div></Navbar.Brand>
-        <span></span>
+        <Navbar.Brand className={styles.navLink} as={Link} to="/"><div className={styles.navHeader}>everheardof</div></Navbar.Brand>
+        <span className={styles.emptySpan}></span>
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
         >
-          <Offcanvas.Header className={styles.offCanvasHeader}>
+          <Offcanvas.Header className={styles.offCanvasHeader} closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">whatsup?</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className={styles.offCanvasBody}>
@@ -57,6 +58,7 @@ const NavigationBar = () => {
         </Navbar.Offcanvas>
       </Container>
     </Navbar>
+    </div>
   )
 }
 

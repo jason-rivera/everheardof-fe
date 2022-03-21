@@ -1,0 +1,9 @@
+.aboutPageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPageContent {
+  text-align: center;
+  width: 500px;
+}
