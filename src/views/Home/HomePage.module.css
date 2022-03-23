@@ -4,6 +4,24 @@
 }
 
 .homePageContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homePageImageContainer {
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  border: 1px solid red;
   text-align: center;
-  width: 500px;
+  
+}
+
+.homePageImage {
+  width: 100%;
+  max-height: 100%;
 }

@@ -1,10 +1,18 @@
 import styles from './HomePage.module.css';
+import { homePageData } from './data';
 
 const HomePage = () => {
   return(
     <div className={styles.homePageContainer}>
       <div className={styles.homePageContent}>
-        <h1>Home Page</h1>
+        {
+          homePageData.map(item => (
+            <div className={styles.homePageImageContainer}>
+              <img className={styles.homePageImage} src={item.imageUrl} />
+            </div>
+          ))
+        }
+
       </div>
     </div>
   )
